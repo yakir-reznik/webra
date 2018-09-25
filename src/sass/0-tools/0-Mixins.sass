@@ -1,0 +1,81 @@
+// Media Query Mixins
+
+@mixin ie9 // styles relevant only to ie 9+
+	@media screen and (min-width:0) and (min-resolution: +72dpi)
+		@content
+
+@mixin iphone // iPhone 6,7,8,x only
+	@media only screen and (max-width: 767px)
+		@supports (-webkit-overflow-scrolling: touch)
+			@content
+
+@mixin huge
+	@media screen and (min-width: 1367px)
+		@content
+
+@mixin desktop
+	@media screen and (min-width: 1260px) and (max-width: 1366px)
+		@content
+
+@mixin desktop_and_huge
+	@media screen and (min-width: 1260px)
+		@content
+		
+@mixin tablet
+	@media screen and (min-width: 768px) and (max-width: 1260px)
+		@content
+    
+@mixin mobile
+	@media screen and (max-width: 767px)
+		@content
+
+@mixin tablet_and_mobile
+	@media screen and (max-width: 1260px)
+		@content
+
+@mixin ie
+	@media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
+		@content
+
+@mixin portrait
+	@media screen and (orientation:portrait)
+		@content
+
+@mixin landscape
+	@media screen and (orientation:landscape)
+		@content
+
+@mixin low_height
+	@media screen and (max-height: 680px)
+		@content
+
+@mixin orientation($key, $value-portrait, $value-landscape)
+	+portrait
+		#{$key}: #{$value-portrait}
+	+landscape
+		#{$key}: #{$value-landscape}
+
+@mixin mq($key, $value-huge, $value-desktop, $value-tablet, $value-mobile)
+	+huge
+		#{$key}: #{$value-huge}
+	+desktop
+		#{$key}: #{$value-desktop}
+	+tablet
+		#{$key}: #{$value-tablet}
+	+mobile
+		#{$key}: #{$value-mobile}
+
+@mixin hover
+	+desktop_and_huge
+		&:hover
+			@content
+			
+@mixin clearfix
+	@extend %clearfix
+
+// Placeholders
+%clearfix
+	&:after
+		display: block
+		content: ' '
+		clear: both

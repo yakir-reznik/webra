@@ -1,0 +1,52 @@
+.post-about-the-author
+	position: relative
+	margin: 8rem 0 0 0
+	padding: 2rem
+	background-color: $light
+	box-shadow: 0 2rem 3rem 0 rgba($mid, 0.3)
+	.post-about-the-author-img
+		position: absolute
+		top: 0
+		left: 50%
+		transform: translate(-50%, -50%)
+		width: 6rem
+		border-radius: 100%
+		box-shadow: 0 0.5rem 1rem 0 rgba($dark, 0.3)
+		+mobile
+			left: 72%
+
+	.post-about-the-author-heading
+		font-size: 1rem
+		font-weight: normal
+		font-family: $font
+		color: $mid
+		margin: 0 0 0.5rem 0
+
+	.post-about-the-author-name
+		font-size: 2rem
+		color: $dark
+		margin-top: 0
+
+	.post-about-the-author-mail, .post-about-the-author-facebook,
+	.post-about-the-author-mail:visited, .post-about-the-author-facebook:visited
+		padding: 0.5rem 0.5rem 0.5rem 0
+		margin-top: 1rem
+		margin-right: 1rem
+		color: $dark
+		display: inline-block
+		transition: background-color 200ms ease-out
+		+clearfix
+		+tablet
+			padding: 0.5rem 0.65rem
+		+desktop_and_huge
+			&:hover
+				background-color: $white
+		span
+			text-align: left
+			font-size: 0.85rem
+			display: block
+			float: left
+			padding: 0.5rem 0 0 0.25rem
+		img
+			max-height: 2rem
+			float: left

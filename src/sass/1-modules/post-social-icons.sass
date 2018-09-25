@@ -1,0 +1,43 @@
+.post-social-icons
+	background-color: $light
+	padding: 2rem
+	margin: 4rem 0 2rem 0
+	text-align: center
+	box-shadow: 0 2rem 3rem 0 rgba($mid, 0.3)
+	+tablet
+		padding: 2rem 0
+
+	.post-social-icons-heading
+		margin: 0
+		font-size: 1.5rem
+
+	ul
+		margin-top: 2rem
+		list-style-type: none
+		+mobile
+			display: inline-block
+		li
+			display: inline-block
+			padding: 0
+			transition: background-color 200ms ease-out
+			+desktop_and_huge
+				&:hover
+					background-color: $white
+			+mobile
+				display: block
+			a, a:visited
+				padding: 0.5rem 1.5rem
+				color: $dark
+				display: block
+				+clearfix
+				+tablet
+					padding: 0.5rem 0.65rem
+				span
+					text-align: left
+					font-size: 0.85rem
+					display: block
+					float: left
+					padding: 0.5rem 0 0 0.25rem
+				img
+					max-height: 2rem
+					float: left

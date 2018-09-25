@@ -1,0 +1,22 @@
+{
+  "name": "Webra_Wordpress_Theme",
+  "version": "1.0.0",
+  "description": "-",
+  "main": "Gruntfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-concurrent": "^2.3.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^2.0.0",
+    "grunt-sass-globbing": "^1.5.1",
+    "load-grunt-tasks": "^3.5.2"
+  },
+  "author": "Yakir Reznik",
+  "license": "Private"
+}

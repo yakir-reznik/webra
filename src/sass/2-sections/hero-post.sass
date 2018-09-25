@@ -1,0 +1,52 @@
+.section.hero-post
+	+tablet_and_mobile
+		min-height: auto
+		padding: 5rem 0 2rem 0
+
+	.hero-post-caption
+		font-family: $font-sec
+		font-size: 1.125rem
+		color: $mid
+		font-weight: normal
+		margin-bottom: 2rem
+
+	.post-title
+		font-size: 3rem
+		margin-bottom: 0.75rem
+		+mobile
+			font-size: 1.75rem
+
+	.post-excerpt
+		width: 50rem
+		max-width: 100%
+
+	.more-posts
+		cursor: pointer
+		font-family: $font-sec
+		padding: 1rem
+		border: 1px solid $dark
+		border-radius: 2px
+		color: $dark
+		font-weight: bold
+		background: none
+		outline: none
+		font-size: 1.125rem
+		position: absolute
+		top: 3rem
+		right: 0
+		+desktop_and_huge
+			transition: background-color 150ms ease-out, color 100ms ease-out
+			&:hover
+				background-color: $dark
+				color: $white
+		&:after
+			content: ' ›'
+			transform: rotate(90deg)
+			margin-left: 0.55rem
+			display: inline-block
+		+tablet_and_mobile
+			position: relative
+			top: -3.5rem
+			left: 9rem
+			border: none
+

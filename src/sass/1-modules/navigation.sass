@@ -1,0 +1,71 @@
+#navigation
+	position: fixed
+	width: 100%
+	top: 0
+	left: 0
+	background-color: $white
+	padding: 2rem 0
+	z-index: 2
+
+	.wrapper-thin
+		+tablet_and_mobile
+			top: -0.65rem
+
+	#logo
+		position: absolute
+		top: 0
+		left: 0
+		height: 1.5rem
+		transform: translateY(-0.25rem)
+		+tablet
+			left: 0
+		+mobile
+			left: 1.125rem
+
+		img
+			max-height: 100%
+
+	ul
+		float: right
+		+tablet_and_mobile
+			float: none
+			background-color: $white
+			transition: transform 250ms ease-out, box-shadow 0ms 100ms linear
+			position: absolute
+			width: 100%
+			top: -2rem
+			left: 0
+			padding: 4rem 2rem 2rem 2rem
+			z-index: 2
+			transform: translateY(-100%)
+			box-shadow: 0 0 24rem 6rem transparent
+
+	ul li
+		list-style-type: none
+		float: left
+		+tablet_and_mobile
+			float: none
+			text-align: center
+
+		a, a:visited
+			display: block
+			text-decoration: none
+			margin-left: 1rem
+			padding: 0 1rem 0 0
+			font-family: $font-sec
+			font-size: 1.125rem
+			color: $dark
+			+tablet_and_mobile
+				padding: 0.5rem 0
+				margin-left: 0
+			+desktop_and_huge
+				&:hover
+					color: $main
+
+	ul li.active a
+		font-weight: bold
+		text-decoration: underline
+
+	#burger-button.active + ul
+		transform: translateY(0)
+		box-shadow: 0 0 24rem 6rem rgba($dark,1)

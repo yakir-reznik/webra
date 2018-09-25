@@ -1,0 +1,37 @@
+.section.recent-posts
+
+	.caption
+		font-family: $font-sec
+		font-size: 1.125rem
+		color: $mid
+		font-weight: normal
+		text-align: center
+		margin-bottom: 6rem
+
+	.post-title
+		font-size: 2rem
+		margin-bottom: 0.75rem
+		+mobile
+			font-size: 1.75rem
+
+	article
+		float: left
+		width: 22.666rem
+		margin: 0 4rem 4rem 0
+		&:nth-child(3n)
+			margin-right: 0
+		&:nth-child(4n)
+			clear: left
+		+tablet_and_mobile
+			float: none
+			width: 100%
+			&:after
+				content: ' '
+				display: block
+				width: 100%
+				margin: 3rem 0
+				border-bottom: 1px solid lighten($mid, 15%)
+			&:last-child
+				&:after
+					border-bottom: 0
+					margin-bottom: 0

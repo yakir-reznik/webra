@@ -1,0 +1,90 @@
+.single-post
+	padding: 6rem 0
+	+tablet_and_mobile
+		padding: 0
+
+	.single-post-section
+		padding: 0
+
+	h1
+		font-size: 3rem
+		margin-bottom: 0.75rem
+		+mobile
+			font-size: 2rem
+	h2, h3, h4, h4, h5
+		margin: 2.5rem 0 1rem 0
+		font-size: 1.5rem
+		+mobile
+			font-size: 1.35rem
+	h2
+		font-size: 1.85rem
+		+mobile
+			font-size: 1.6rem
+
+	.post-excerpt, .post-content
+		line-height: 1.45
+		font-size: 1.125rem
+
+	.post-content
+
+		a, a:visited
+			color: $main
+			text-decoration: underline
+
+		ol, ul
+			list-style-position: inside
+
+		/* Quotes */
+		blockquote
+			margin: 2rem 0
+			p
+				font-style: italic
+				padding: 0 2rem 0 2.5rem
+				position: relative
+				color: $mid
+				&:before, &:after
+					content: '“'
+					font-family: $font-sec
+					position: absolute
+					top: 1rem
+					left: 0
+					color: $mid
+					font-size: 4rem
+					font-style: normal
+					line-height: 0
+					font-weight: bold
+				&:after
+					content: '„'
+					text-indent: 0
+					top: auto
+					bottom: 1rem
+					left: auto
+					right: 1rem
+			
+			cite
+				padding: 0.75rem 0 0 2rem
+				font-size: 0.85rem
+				color: $grey
+				display: block
+
+		/* Code block */
+		pre
+			border: 1px solid $mid
+			background-color: $light
+			padding: 1rem
+			line-height: 1.25
+			position: relative
+			margin: 1rem 0
+			code
+				display: block
+				width: 100%
+				max-height: 20rem
+				overflow: scroll
+				font-size: 1rem
+				font-family: $font-sec
+
+		/* Codepen code block - embed as iframe */
+		.cp_embed_wrapper
+			iframe
+				height: 20rem
+				overflow: scroll

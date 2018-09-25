@@ -1,0 +1,30 @@
+#burger-button
+	+desktop_and_huge
+		display: none
+	width: 4.125rem
+	height: 4rem
+	position: absolute
+	right: 0.5rem
+	top: -1.125rem
+	background: none
+	outline: none
+	border: none
+	padding: 1rem
+	z-index: 3
+	+tablet
+		right: 0
+	i
+		display: block
+		height: 3px
+		background-color: $dark
+		margin-bottom: 6px
+		border-radius: 3px
+		transition: transform 300ms ease-out
+
+#burger-button.active
+	i:nth-child(1)
+		transform: rotate(45deg) translate(6px, 6px)
+	i:nth-child(2)
+		transform: scaleX(0)
+	i:nth-child(3)
+		transform: rotate(-45deg) translate(6px, -6px)

@@ -1,0 +1,1 @@
+<?php // The Sound Of Silence

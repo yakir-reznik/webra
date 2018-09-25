@@ -1,0 +1,13 @@
+.wrapper, .wrapper-thin
+	position: relative
+	margin: 0 auto
+	padding: 1rem
+	+mq('width', '76rem', '76rem', '44rem', '100%')
+	+mq('padding', '0', '0', '0', '0 1rem')
+	+clearfix
+
+.wrapper-thin
+	+mq('width', '56rem', '56rem', '44rem', '100%')
+
+.wrapper .wrapper-thin
+	padding: 0

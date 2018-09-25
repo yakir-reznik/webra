@@ -1,0 +1,47 @@
+.post-link:not(:hover):before
+	opacity: 0
+.post-link, .post-link:visited
+	display: inline-block
+	font-family: $font-sec
+	padding: 1rem
+	background-color: $main
+	color: $white
+	font-weight: bold
+	text-decoration: none
+	margin-top: 2rem
+	font-size: 1.125rem
+	border-radius: 2px
+	position: relative
+	&:after
+		content: ' ›'
+	+desktop_and_huge
+		overflow: hidden
+		transition: background-color 100ms linear
+		&:before
+			content: ' '
+			position: absolute
+			width: 2rem
+			height: 100%
+			top: 0
+			left: -3rem
+			transform: skew(-20deg, 0)
+			background-color: rgba($white, 0.3)
+			transition: left 400ms ease-in-out, width 400ms ease-in-out 
+			box-shadow: 0 0 0.5rem 0 rgba($white, 0.3)
+		
+		&:hover
+			background-color: #ff0054
+			&:before
+				left: 150%
+				width: 5rem
+
+.post-author-and-date
+	color: $grey
+	margin-bottom: 2rem
+	+mobile
+		font-size: 0.85rem
+	a
+		color: inherit
+		text-decoration: none
+		&:hover
+			text-decoration: underline
