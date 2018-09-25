@@ -1,3 +1,5 @@
+// some comment
+
 var blockSettings = {
 	package		:	'webra',						// The package that contains the block
 	slug		:	'test_block',					// The unique name of the block, slug
