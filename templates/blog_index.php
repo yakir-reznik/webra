@@ -42,7 +42,9 @@
 						<!-- END OF META DATA -->
 
 						<header>
-							<h3 class="post-title" itemprop="name headline"><?php the_title(); ?></h3>
+							<h3 class="post-title" itemprop="name headline">
+								<a href="<?php the_permalink(); ?>" title="to the full post"><?php the_title(); ?></a>
+							</h3>
 							<p class="post-author-and-date">posted <time pubdate="pubdate"><?php the_modified_date('F jS, G:i '); ?></time> by <a target="_blank" href="<?php the_author_meta( 'user_url', $post->post_author ); ?>" rel="author"><?php the_author_meta( 'display_name', $post->post_author ); ?></a></p>
 						</header>
 						<p class="post-excerpt" itemprop="description"><?php the_excerpt(); ?></p>
@@ -88,7 +90,9 @@
 					<!-- END OF META DATA -->
 
 					<header>
-						<h3 class="post-title" itemprop="name headline"><?php the_title(); ?></h3>
+						<h3 class="post-title" itemprop="name headline">
+							<a href="<?php the_permalink(); ?>" title="to the full post"><?php the_title(); ?></a>
+						</h3>
 						<p class="post-author-and-date">posted <time pubdate="pubdate"><?php the_modified_date('F jS, G:i '); ?></time> by <a target="_blank" href="<?php the_author_meta( 'user_url', $post->post_author ); ?>" rel="author"><?php the_author_meta( 'display_name', $post->post_author ); ?></a></p>
 					</header>
 					<p class="post-excerpt" itemprop="description"><?php echo get_the_excerpt(); ?></p>
